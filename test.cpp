@@ -1,5 +1,5 @@
 #define CATCH_CONFIG_MAIN
-#include "catch.hpp"
+#include "others/catch.hpp"
 #include "string_soma.cpp"
 
 /**
@@ -21,6 +21,6 @@
 TEST_CASE("Verificação da função soma_string") {
     SECTION("Verifica quebras básicas"){
         REQUIRE(soma_string("") == -1);
-        // REQUIRE(soma_string("-1") == -1);
+        REQUIRE(soma_string("-1") == -1);
     }
 }

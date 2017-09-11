@@ -6,7 +6,11 @@ int soma_string(std::string my_string){
     if(my_string.empty()){
         return -1;
     }
-    return 666;
+    else{
+        if(my_string[my_string.find('-')] == '-'){
+            return -1;
+        }
+    }
 
 
   // if (std::regex_match ("subject", std::regex("(sub)(.*)")))
