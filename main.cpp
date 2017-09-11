@@ -2,5 +2,5 @@
 
 int main(){
     std::cin<<my_string;
-    soma_string(my_string);
+    std::cout<<(soma_string(my_string);
 }
