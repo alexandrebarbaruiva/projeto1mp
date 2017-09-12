@@ -1,15 +1,57 @@
 #include <iostream>
+#include <sstream>
+#include <vector>
+#include <algorithm>
 #include <string>
 #include <regex>
 
-int soma_string(std::string my_string){
-    if(!my_string.empty()){
-        if(my_string[my_string.find('-')] == '-'){
-            return -1;
-        }
-        
+std::string remove_newlines(std::string my_string){
+    for(int pos = 0; pos < my_string.length(); pos++){
+        my_string.erase(std::remove(my_string.begin(), my_string.end(), '\n'), my_string.end());
     }
-    return -1;
+    return(my_string);
+}
+
+std::vector<int> vectorize(std::string my_string){
+    std::vector<int> vectorized;
+    std::stringstream string_operator(my_string);
+    int a;
+    while(string_operator >> a){
+        vectorized.push_back(a);
+        if (string_operator.peek() == ','){
+            string_operator.ignore();
+        }
+    }
+    std::cout << "v3" << std::endl;
+    return(vectorized);
+}
+
+int soma_string(std::string my_string){
+    std::regex endfile ("\\d\n$");
+
+    if(!my_string.empty()){
+        // Check for negative number in string
+        if(my_string[my_string.find('-')] == '-'){
+            return(-1);
+        }
+        else{
+            // Check for whitespaces in string
+            if(my_string[my_string.find(' ')] == ' '){
+                return(-1);
+            }
+            if(std::regex_match(my_string, endfile)){
+                my_string = remove_newlines(my_string);
+                std::vector<int> my_string_vector = vectorize(my_string);
+                print(my_string_vector.size());
+                if(my_string_vector.size() == 1) {
+                    return((my_string_vector[0] < 1001) ? my_string_vector[0] : -1);
+                }
+            }
+            return(-3);
+        }
+    }
+    return(-2);
+
 
 
   // if (std::regex_match ("subject", std::regex("(sub)(.*)")))

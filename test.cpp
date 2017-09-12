@@ -20,7 +20,20 @@
 */
 TEST_CASE("Verificação da função soma_string") {
     SECTION("Verifica quebras básicas"){
-        REQUIRE(soma_string("") == -1);
-        REQUIRE(soma_string("-1") == -1);
+        REQUIRE(soma_string("") == -1); //string nula
+        REQUIRE(soma_string("-1\n") == -1); //negativo
+        REQUIRE(soma_string("1") == -1); //sem \n
+        // REQUIRE(soma_string() == -1);
+        // REQUIRE(soma_string() == -1);
+    }
+
+    SECTION("Casos básicos que dão certo"){
+        SECTION("Casos com 1 número"){
+            REQUIRE(soma_string("1\n") == 1);
+            REQUIRE(soma_string("7\n") == 7);
+            REQUIRE(soma_string("1000\n") == 1000);
+            REQUIRE(soma_string("1001\n") == -1);
+        }
+
     }
 }
