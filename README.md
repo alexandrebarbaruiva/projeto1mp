@@ -30,12 +30,11 @@ Then run the a.out file
 ```
 ./program
 ```
-Now insert your input according to the requisites
+Now insert your input according to the requisites found here: [PDF Document](mp_t1.pdf)
 
 ## File description
 
-- main.cpp -
-- string_soma.cpp -
-- string_soma.hpp -
-- test.cpp -
-- ball.txt -
+- main.cpp - Program for
+- string_soma.hpp - Abstract file for function soma_string
+- string_soma.cpp - Implementation of function soma_string
+- test.cpp - Code for all the unit tests (it was used TDD in this project! Yay!)
