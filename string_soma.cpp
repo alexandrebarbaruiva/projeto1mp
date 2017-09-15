@@ -5,6 +5,12 @@
 #include <string>
 #include <regex>
 
+/** @brief Function responsible for the removal of newlines in the string to be
+* treated.
+*
+* Particularly useful when the string in question is filled with non-breaking
+* newlines
+*/
 std::string remove_newlines(std::string my_string){
     for(int pos = 0; pos < my_string.length(); pos++){
         my_string.erase(std::remove(my_string.begin(), my_string.end(), '\n'), my_string.end());
@@ -12,6 +18,11 @@ std::string remove_newlines(std::string my_string){
     return(my_string);
 }
 
+/** @brief Function to make the process of summing up the numbers in the string
+* truly simple.
+*
+* Once vectorized, all kinds of operations become possible to be done.
+*/
 std::vector<int> vectorize(std::string my_string){
     std::vector<int> vectorized;
     std::stringstream string_operator(my_string);
@@ -22,10 +33,13 @@ std::vector<int> vectorize(std::string my_string){
             string_operator.ignore();
         }
     }
-    std::cout << "v3" << std::endl;
     return(vectorized);
 }
 
+/** @brief Main function, responsible for delegating tasks
+*
+* Once it reaches the end, it gives the result of a string sum.
+*/
 int soma_string(std::string my_string){
     std::regex endfile ("\\d+\n+$");
 
@@ -40,8 +54,8 @@ int soma_string(std::string my_string){
                 my_string = remove_newlines(my_string);
                 std::vector<int> my_string_vector = vectorize(my_string);
 
-                std::cout<<my_string<<std::endl;
-                std::cout<<"SIZE: " + std::to_string(my_string_vector.size())<<std::endl;
+                // std::cout<<my_string<<std::endl;
+                // std::cout<<"SIZE: " + std::to_string(my_string_vector.size())<<std::endl;
 
                 int total_sum = 0;
                 for(int my_number = 0; my_number < my_string_vector.size(); my_number++) {
@@ -52,7 +66,7 @@ int soma_string(std::string my_string){
             }
             return(-1);
         }
-        return(-2);
+        return(-1);
     }
     return(-1);
 

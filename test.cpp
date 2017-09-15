@@ -50,12 +50,18 @@ TEST_CASE("Verificação da função soma_string") {
         }
         SECTION("Casos com 2 números"){
             REQUIRE(soma_string("1,1\n") == 2);
+            REQUIRE(soma_string("15,39\n") == 54);
         }
     }
     SECTION("Casos complexos que dão certo"){
+        SECTION("Muitas quebras de linhas entre números"){
+            REQUIRE(soma_string("\n\n\n\n3\n\n\n\n,\n\n\n\n4\n\n\n\n") == 7);
+        }
 
     }
     SECTION("Casos complexos que dão errado"){
-
+        SECTION("Múltiplas vírgulas"){
+            REQUIRE(soma_string("3,,4") == -1);
+        }
     }
 }
