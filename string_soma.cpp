@@ -36,18 +36,19 @@ int soma_string(std::string my_string){
             return(-1);
         }
         else{
-            if(std::regex_match(my_string, endfile)){
+            if(std::regex_search(my_string, endfile)){
                 my_string = remove_newlines(my_string);
                 std::vector<int> my_string_vector = vectorize(my_string);
 
                 std::cout<<my_string<<std::endl;
                 std::cout<<"SIZE: " + std::to_string(my_string_vector.size())<<std::endl;
 
-                total_sum = 0;
+                int total_sum = 0;
                 for(int my_number = 0; my_number < my_string_vector.size(); my_number++) {
-                    return((my_string_vector[0] < 1001) ? my_string_vector[0] : -1);
+                    total_sum += (my_string_vector[my_number] < 1001 ?
+                                        my_string_vector[my_number] : 0);
                 }
-                return(-4);
+                return(total_sum);
             }
             return(-1);
         }

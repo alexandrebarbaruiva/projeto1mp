@@ -19,12 +19,11 @@
 * está sendo testada.
 */
 TEST_CASE("Verificação da função soma_string") {
-    SECTION("Verifica quebras básicas"){
+    SECTION("Casos de quebras básicas"){
         REQUIRE(soma_string("") == -1); //string nula
         REQUIRE(soma_string("-1\n") == -1); //negativo
         REQUIRE(soma_string("1") == -1); //sem \n
-        // REQUIRE(soma_string() == -1);
-        // REQUIRE(soma_string() == -1);
+        REQUIRE(soma_string("\n") == -1);
     }
 
     SECTION("Casos básicos que dão certo"){
@@ -44,8 +43,19 @@ TEST_CASE("Verificação da função soma_string") {
             REQUIRE(soma_string("230\n") == 230);
             REQUIRE(soma_string("990\n") == 990);
         }
-        REQUIRE(soma_string("1000\n") == 1000);
-        REQUIRE(soma_string("1001\n") == -1);
+        SECTION("Casos com 1 número e 4 casas decimais"){
+            REQUIRE(soma_string("1000\n") == 1000);
+            REQUIRE(soma_string("1001\n") == 0);
+            REQUIRE(soma_string("9999999\n") == 0);
+        }
+        SECTION("Casos com 2 números"){
+            REQUIRE(soma_string("1,1\n") == 2);
+        }
+    }
+    SECTION("Casos complexos que dão certo"){
+
+    }
+    SECTION("Casos complexos que dão errado"){
 
     }
 }
