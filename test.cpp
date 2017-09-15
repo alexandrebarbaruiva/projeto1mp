@@ -39,13 +39,13 @@ TEST_CASE("Verificação da função soma_string") {
             REQUIRE(soma_string("23\n") == 23);
             REQUIRE(soma_string("99\n") == 99);
         }
-        // SECTION("Casos com 1 número e 3 casas decimais"){
-        //     REQUIRE(soma_string("100\n") == 100);
-        //     REQUIRE(soma_string("230\n") == 230);
-        //     REQUIRE(soma_string("990\n") == 990);
-        // }
-        // REQUIRE(soma_string("1000\n") == 1000);
-        // REQUIRE(soma_string("1001\n") == -1);
+        SECTION("Casos com 1 número e 3 casas decimais"){
+            REQUIRE(soma_string("100\n") == 100);
+            REQUIRE(soma_string("230\n") == 230);
+            REQUIRE(soma_string("990\n") == 990);
+        }
+        REQUIRE(soma_string("1000\n") == 1000);
+        REQUIRE(soma_string("1001\n") == -1);
 
     }
 }

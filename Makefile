@@ -12,6 +12,6 @@ run:
 	g++ test.cpp -o program -std=c++11
 	./program
 	cppcheck --enable=all string_soma.cpp string_soma.hpp
-	
+
 clean:
 	rm *.gcda *.gcno

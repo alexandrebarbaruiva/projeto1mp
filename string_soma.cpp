@@ -27,29 +27,29 @@ std::vector<int> vectorize(std::string my_string){
 }
 
 int soma_string(std::string my_string){
-    std::regex endfile ("\\d\n$");
+    std::regex endfile ("\\d+\n+$");
 
     if(!my_string.empty()){
-        // Check for negative number in string
-        if(my_string[my_string.find('-')] == '-'){
+        // Check for negative number or withespaces in string
+        if(my_string[my_string.find('-')] == '-' ||
+                my_string[my_string.find(' ')] == ' '){
             return(-1);
         }
         else{
-            // Check for whitespaces in string
-            if(my_string[my_string.find(' ')] == ' '){
-                return(-1);
-            }
             if(std::regex_match(my_string, endfile)){
                 my_string = remove_newlines(my_string);
                 std::vector<int> my_string_vector = vectorize(my_string);
+
                 std::cout<<my_string<<std::endl;
                 std::cout<<"SIZE: " + std::to_string(my_string_vector.size())<<std::endl;
-                if(my_string_vector.size() == 1) {
+
+                total_sum = 0;
+                for(int my_number = 0; my_number < my_string_vector.size(); my_number++) {
                     return((my_string_vector[0] < 1001) ? my_string_vector[0] : -1);
                 }
                 return(-4);
             }
-            return(-3);
+            return(-1);
         }
         return(-2);
     }
