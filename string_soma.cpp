@@ -42,15 +42,18 @@ int soma_string(std::string my_string){
             if(std::regex_match(my_string, endfile)){
                 my_string = remove_newlines(my_string);
                 std::vector<int> my_string_vector = vectorize(my_string);
-                print(my_string_vector.size());
+                std::cout<<my_string<<std::endl;
+                std::cout<<"SIZE: " + std::to_string(my_string_vector.size())<<std::endl;
                 if(my_string_vector.size() == 1) {
                     return((my_string_vector[0] < 1001) ? my_string_vector[0] : -1);
                 }
+                return(-4);
             }
             return(-3);
         }
+        return(-2);
     }
-    return(-2);
+    return(-1);
 
 
 

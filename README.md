@@ -1,6 +1,6 @@
 # Projeto Somador de strings numéricas
 
-This project aims to implement knowledge acquired in the classes of Métodos de Programação by means of the simulation of the fall of a ball inside a 2D box.
+This project aims to implement knowledge acquired in the class of Métodos de Programação by means of the simulation of the fall of a ball inside a 2D box.
 
 ## Requirements
 
@@ -28,12 +28,13 @@ make
 Then run the a.out file
 
 ```
-./a.out
+./program
 ```
+Now insert your input according to the requisites
 
 ## File description
 
-- main.cpp - 
+- main.cpp -
 - string_soma.cpp -
 - string_soma.hpp -
 - test.cpp -
