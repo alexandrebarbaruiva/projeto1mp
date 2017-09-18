@@ -36,12 +36,47 @@ std::vector<int> vectorize(std::string my_string){
     return(vectorized);
 }
 
+std::string find_delimiters(std::string my_string){
+    std::regex beginfile ("^//\\[.*\\]\n");
+    std::vector<std::string> delimiters;
+    std::string open_del = "[";
+    std::string close_del = "]";
+
+    std::size_t f_odel = my_string.find("["); // Finds start of a delimiter
+    std::size_t f_cdel = my_string.find("]"); // Finds end of a delimiter
+    while(f_odel != std::string::npos &&
+                f_cdel != std::string::npos){
+        std::string new_delimiter = my_string.substr(f_odel+1,
+                                            (f_cdel-f_odel-1));
+        delimiters.push_back(new_delimiter);
+        my_string.replace(0, f_cdel+2, "");
+        std::cout<<my_string;
+        f_odel = my_string.find("[");
+        f_cdel = my_string.find("]");
+    }
+
+
+
+    for(int md = 0; md < delimiters.size(); md++){
+        std::size_t find_del = my_string.find(delimiters[md]);
+        std::cout << md << '\n';
+        while(find_del != std::string::npos){
+            my_string.replace(find_del,delimiters[md].size(),",");
+            std::size_t find_del = my_string.find(delimiters[md]);
+            std::cout << my_string << '\n';
+        }
+    }
+    return my_string;
+}
+
 /** @brief Main function, responsible for delegating tasks
 *
 * Once it reaches the end, it gives the result of a string sum.
 */
 int soma_string(std::string my_string){
-    std::regex endfile ("\\d+\n+$");
+    std::regex endfile ("\\d+\n+$"); //
+    std::regex not_valids ("[^\\d,\n]");
+    std::regex beginfile ("^//\\[.*\\]\n");
 
     if(!my_string.empty()){
         // Check for negative number or withespaces in string
@@ -51,12 +86,20 @@ int soma_string(std::string my_string){
         }
         else{
             if(std::regex_search(my_string, endfile)){
+                // Check for different delimiters
+                if(std::regex_search(my_string, beginfile)){
+                    my_string = find_delimiters(my_string);
+                }
+
+
+                // Remove all newlines once they are checked for correctness
                 my_string = remove_newlines(my_string);
                 std::vector<int> my_string_vector = vectorize(my_string);
 
-                // std::cout<<my_string<<std::endl;
-                // std::cout<<"SIZE: " + std::to_string(my_string_vector.size())<<std::endl;
-
+                if(std::regex_search(my_string, not_valids)){
+                    return -1;
+                }
+                
                 int total_sum = 0;
                 for(int my_number = 0; my_number < my_string_vector.size(); my_number++) {
                     total_sum += (my_string_vector[my_number] < 1001 ?
