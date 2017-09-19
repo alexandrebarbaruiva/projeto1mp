@@ -34,7 +34,12 @@ Now insert your input according to the requisites found here: [PDF Document](mp_
 
 ## File description
 
-- main.cpp - Program for
+- testa_soma_string_stdin.cpp - Program for checking text files
 - string_soma.hpp - Abstract file for function soma_string
 - string_soma.cpp - Implementation of function soma_string
 - test.cpp - Code for all the unit tests (it was used TDD in this project! Yay!)
+
+## TODO
+
+- [ ] Criar doxygen
+- [ ] Checar vírgulas duplas
