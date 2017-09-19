@@ -1,6 +1,9 @@
 # Projeto Somador de strings numéricas
 
 This project aims to implement knowledge acquired in the class of Métodos de Programação by means of summing a string of numbers.
+## Documentation
+
+[Here.](https://cdn.rawgit.com/alexandrebarbaruiva/projeto1mp/382482ae/html/md__r_e_a_d_m_e.html)
 
 ## Requirements
 
