@@ -13,7 +13,7 @@ Compiler installation:
 - [Linux 4.9.](https://askubuntu.com/questions/428198/getting-installing-gcc-g-4-9-on-ubuntu)
 
 For coverage, gcovr is used. Go to http://gcovr.com/ for installation process.
-It's used valgrind to check use of memory.
+It's used [valgrind](http://valgrind.org/) to check use of memory. [Installation process here] (http://valgrind.org/docs/manual/dist.install.html)
 
 ## Installing/Compiling
 
