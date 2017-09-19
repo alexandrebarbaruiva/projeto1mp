@@ -75,7 +75,6 @@ std::string find_delimiters(std::string my_string){
         while(find_del != std::string::npos && delimiters[md] != ","){
             my_string.replace(find_del,delimiters[md].size(),",");
             find_del = my_string.find(delimiters[md]);
-            std::cout << my_string << '\n';
         }
     }
     return my_string;

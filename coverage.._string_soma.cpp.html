@@ -275,12 +275,12 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2017-09-18</td>
+            <td class="headerValue">2017-09-19</td>
             <td></td>
             <td class="headerName">Branches:</td>
-            <td class="headerTableEntry">77</td>
-            <td class="headerTableEntry">120</td>
-            <td class="headerTableEntry" style="background-color:LightPink">64.2 %</td>
+            <td class="headerTableEntry">80</td>
+            <td class="headerTableEntry">124</td>
+            <td class="headerTableEntry" style="background-color:LightPink">64.5 %</td>
           </tr>
         </table>
       </td>
@@ -380,7 +380,7 @@
     <td align="right" class="lineno"><pre>12</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>* newlines</pre></td>
+    <td align="left" class="src "><pre>* newlines.</pre></td>
     </tr>
 
     <tr>
@@ -583,7 +583,7 @@
     <td align="right" class="lineno"><pre>41</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>* Also checks if all characters are valid</pre></td>
+    <td align="left" class="src "><pre>* Also checks if all characters are valid.</pre></td>
     </tr>
 
     <tr>
@@ -603,7 +603,7 @@
     <tr>
     <td align="right" class="lineno"><pre>44</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>16</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>20</pre></td>
     <td align="left" class="src coveredLine"><pre>    std::vector&lt;std::string&gt; delimiters;</pre></td>
     </tr>
 
@@ -624,77 +624,77 @@
     <tr>
     <td align="right" class="lineno"><pre>47</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>    std::size_t f_odel = my_string.find("["); // Finds start of a delimiter</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>48</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>    std::size_t f_cdel = my_string.find("]"); // Finds end of a delimiter</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>49</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 8 times">&check;</span><span class="takenBranch" title="Branch 1 taken 8 times">&check;</span><span class="takenBranch" title="Branch 2 taken 8 times">&check;</span><span class="takenBranch" title="Branch 3 taken 8 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>48</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 10 times">&check;</span><span class="takenBranch" title="Branch 1 taken 10 times">&check;</span><span class="takenBranch" title="Branch 2 taken 10 times">&check;</span><span class="takenBranch" title="Branch 3 taken 10 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>60</pre></td>
     <td align="left" class="src coveredLine"><pre>    while(f_odel != std::string::npos &amp;&amp;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>50</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>                f_cdel != std::string::npos){</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>51</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 8 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 8 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>16</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 10 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 10 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>20</pre></td>
     <td align="left" class="src coveredLine"><pre>        std::string new_delimiter = my_string.substr(f_odel+1,</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>52</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>                                            (f_cdel-f_odel-1));</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>53</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 8 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 10 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>        delimiters.push_back(new_delimiter);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>54</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 8 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 10 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>        my_string.replace(0, f_cdel+2, "");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>55</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>        f_odel = my_string.find("[");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>56</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>        f_cdel = my_string.find("]");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>57</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>    }</pre></td>
     </tr>
 
@@ -714,36 +714,36 @@
 
     <tr>
     <td align="right" class="lineno"><pre>60</pre></td>
-    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 8 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 10 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>    std::string all_del = "[^\\d";</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>61</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 8 times">&check;</span><span class="takenBranch" title="Branch 1 taken 8 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>32</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 10 times">&check;</span><span class="takenBranch" title="Branch 1 taken 10 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>40</pre></td>
     <td align="left" class="src coveredLine"><pre>    for(int md = 0; md &lt; delimiters.size(); md++){</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>62</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 8 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 8 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>16</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 10 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 10 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>20</pre></td>
     <td align="left" class="src coveredLine"><pre>        all_del += delimiters[md];</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>63</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>    }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>64</pre></td>
-    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 8 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 10 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>    all_del += "\n]";</pre></td>
     </tr>
 
@@ -751,447 +751,454 @@
     <td align="right" class="lineno"><pre>65</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    // Check if all characters are valid</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>66</pre></td>
-    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 8 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
-    <td align="left" class="src coveredLine"><pre>    std::regex not_valids (all_del);</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    // Check if all characters are valid</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>67</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 8 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 2 times">&check;</span><span class="takenBranch" title="Branch 3 taken 6 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>16</pre></td>
-    <td align="left" class="src coveredLine"><pre>    if(std::regex_search(my_string, not_valids)){</pre></td>
+    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 10 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
+    <td align="left" class="src coveredLine"><pre>    std::regex not_valids (all_del);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>68</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 10 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 2 times">&check;</span><span class="takenBranch" title="Branch 3 taken 8 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>20</pre></td>
+    <td align="left" class="src coveredLine"><pre>    if(std::regex_search(my_string, not_valids)){</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>69</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 2 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>4</pre></td>
     <td align="left" class="src coveredLine"><pre>        return("-1\n");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>69</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    }</pre></td>
-    </tr>
-
-    <tr>
     <td align="right" class="lineno"><pre>70</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>    }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>71</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    // Change all delimiters to comma</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>72</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 6 times">&check;</span><span class="takenBranch" title="Branch 1 taken 6 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>24</pre></td>
-    <td align="left" class="src coveredLine"><pre>    for(int md = 0; md &lt; delimiters.size(); md++){</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    // Change all delimiters to comma</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>73</pre></td>
-    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 6 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>12</pre></td>
-    <td align="left" class="src coveredLine"><pre>        std::size_t find_del = my_string.find(delimiters[md]);</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 8 times">&check;</span><span class="takenBranch" title="Branch 1 taken 8 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>32</pre></td>
+    <td align="left" class="src coveredLine"><pre>    for(int md = 0; md &lt; delimiters.size(); md++){</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>74</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 12 times">&check;</span><span class="takenBranch" title="Branch 1 taken 6 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>36</pre></td>
-    <td align="left" class="src coveredLine"><pre>        while(find_del != std::string::npos){</pre></td>
+    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 8 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>16</pre></td>
+    <td align="left" class="src coveredLine"><pre>        std::size_t find_del = my_string.find(delimiters[md]);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>75</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 14 times">&check;</span><span class="takenBranch" title="Branch 1 taken 6 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 14 times">&check;</span><br/><span class="takenBranch" title="Branch 4 taken 12 times">&check;</span><span class="takenBranch" title="Branch 5 taken 8 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>88</pre></td>
+    <td align="left" class="src coveredLine"><pre>        while(find_del != std::string::npos &amp;&amp; delimiters[md] != ","){</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>76</pre></td>
     <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 12 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 12 times">&check;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>24</pre></td>
     <td align="left" class="src coveredLine"><pre>            my_string.replace(find_del,delimiters[md].size(),",");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>76</pre></td>
+    <td align="right" class="lineno"><pre>77</pre></td>
     <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 12 times">&check;</span></td>
     <td align="right" class="linecount coveredLine"><pre>24</pre></td>
     <td align="left" class="src coveredLine"><pre>            find_del = my_string.find(delimiters[md]);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>77</pre></td>
+    <td align="right" class="lineno"><pre>78</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>        }</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>78</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6</pre></td>
-    <td align="left" class="src coveredLine"><pre>    }</pre></td>
-    </tr>
-
-    <tr>
     <td align="right" class="lineno"><pre>79</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6</pre></td>
-    <td align="left" class="src coveredLine"><pre>    return my_string;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="left" class="src coveredLine"><pre>    }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>80</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>8</pre></td>
-    <td align="left" class="src coveredLine"><pre>}</pre></td>
+    <td align="left" class="src coveredLine"><pre>    return my_string;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>81</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
+    <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>82</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/** @brief Main function, responsible for delegating tasks</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>83</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>*</pre></td>
+    <td align="left" class="src "><pre>/** @brief Main function, responsible for delegating tasks</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>84</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>* Once it reaches the end, it gives the result of a string sum.</pre></td>
+    <td align="left" class="src "><pre>*</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>85</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>*/</pre></td>
+    <td align="left" class="src "><pre>* Once it reaches the end, it gives the result of a string sum.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>86</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>int soma_string(std::string my_string){</pre></td>
+    <td align="left" class="src "><pre>*/</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>87</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>156</pre></td>
-    <td align="left" class="src coveredLine"><pre>    std::regex endfile ("\\d+\n+$"); //</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>int soma_string(std::string my_string){</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>88</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 78 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>78</pre></td>
-    <td align="left" class="src coveredLine"><pre>    std::regex not_valids ("[^\\d,\n]");</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>160</pre></td>
+    <td align="left" class="src coveredLine"><pre>    std::regex endfile ("\\d+\n+$"); // REGEX correct end</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>89</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 78 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>78</pre></td>
-    <td align="left" class="src coveredLine"><pre>    std::regex beginfile ("^//\\[.*\\]\n");</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 80 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>80</pre></td>
+    <td align="left" class="src coveredLine"><pre>    std::regex not_valids ("[^\\d,\n]"); // REGEX char not valid</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>90</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 78 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>78</pre></td>
-    <td align="left" class="src coveredLine"><pre>    std::regex doublecomma (",,");</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 80 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>80</pre></td>
+    <td align="left" class="src coveredLine"><pre>    std::regex beginfile ("^//\\[.*\\]\n"); // REGEX personalized delimiters</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>91</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 78 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>78</pre></td>
-    <td align="left" class="src coveredLine"><pre>    std::regex commainit ("^,");</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 80 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>80</pre></td>
+    <td align="left" class="src coveredLine"><pre>    std::regex doublecomma (",,"); // REGEX double commas</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>92</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 80 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>80</pre></td>
+    <td align="left" class="src coveredLine"><pre>    std::regex commainit ("^,"); // REGEX breaking comma at beginning</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>93</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>93</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 76 times">&check;</span><span class="takenBranch" title="Branch 1 taken 2 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>78</pre></td>
+    <td align="right" class="lineno"><pre>94</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 78 times">&check;</span><span class="takenBranch" title="Branch 1 taken 2 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>80</pre></td>
     <td align="left" class="src coveredLine"><pre>    if(!my_string.empty()){</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>94</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 76 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 62 times">&check;</span><span class="takenBranch" title="Branch 3 taken 14 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>152</pre></td>
+    <td align="right" class="lineno"><pre>95</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 78 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 64 times">&check;</span><span class="takenBranch" title="Branch 3 taken 14 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>156</pre></td>
     <td align="left" class="src coveredLine"><pre>        if(std::regex_search(my_string, endfile)){</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>95</pre></td>
+    <td align="right" class="lineno"><pre>96</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>            // Check for different delimiters</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>96</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 62 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 8 times">&check;</span><span class="takenBranch" title="Branch 3 taken 54 times">&check;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>124</pre></td>
+    <td align="right" class="lineno"><pre>97</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 64 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 10 times">&check;</span><span class="takenBranch" title="Branch 3 taken 54 times">&check;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>128</pre></td>
     <td align="left" class="src coveredLine"><pre>            if(std::regex_search(my_string, beginfile)){</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>97</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 8 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 8 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>24</pre></td>
-    <td align="left" class="src coveredLine"><pre>                my_string = find_delimiters(my_string);</pre></td>
-    </tr>
-
-    <tr>
     <td align="right" class="lineno"><pre>98</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
-    <td align="left" class="src coveredLine"><pre>            }</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 10 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 10 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>30</pre></td>
+    <td align="left" class="src coveredLine"><pre>                my_string = find_delimiters(my_string);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>99</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10</pre></td>
+    <td align="left" class="src coveredLine"><pre>            }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>100</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>            // Check for negative number or white spaces in string</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>101</pre></td>
-    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 62 times">&check;</span><span class="takenBranch" title="Branch 2 taken 58 times">&check;</span><span class="takenBranch" title="Branch 3 taken 4 times">&check;</span><br/><span class="takenBranch" title="Branch 4 taken 2 times">&check;</span><span class="takenBranch" title="Branch 5 taken 56 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>182</pre></td>
-    <td align="left" class="src coveredLine"><pre>            if(my_string[my_string.find('-')] == '-' ||</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            // Check for negative number or white spaces in string</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>102</pre></td>
-    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 58 times">&check;</span><span class="takenBranch" title="Branch 2 taken 58 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>116</pre></td>
-    <td align="left" class="src coveredLine"><pre>                    my_string[my_string.find(' ')] == ' '||</pre></td>
+    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 64 times">&check;</span><span class="takenBranch" title="Branch 2 taken 60 times">&check;</span><span class="takenBranch" title="Branch 3 taken 4 times">&check;</span><br/><span class="takenBranch" title="Branch 4 taken 4 times">&check;</span><span class="takenBranch" title="Branch 5 taken 56 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>188</pre></td>
+    <td align="left" class="src coveredLine"><pre>            if(my_string[my_string.find('-')] == '-' ||</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>103</pre></td>
-    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 58 times">&check;</span><span class="takenBranch" title="Branch 2 taken 58 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>116</pre></td>
-    <td align="left" class="src coveredLine"><pre>                        std::regex_search(my_string, doublecomma) ||</pre></td>
+    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 60 times">&check;</span><span class="takenBranch" title="Branch 2 taken 60 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>120</pre></td>
+    <td align="left" class="src coveredLine"><pre>                    my_string[my_string.find(' ')] == ' '||</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>104</pre></td>
-    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 58 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>58</pre></td>
-    <td align="left" class="src coveredLine"><pre>                            std::regex_search(my_string, commainit)){</pre></td>
+    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 60 times">&check;</span><span class="takenBranch" title="Branch 2 taken 60 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>120</pre></td>
+    <td align="left" class="src coveredLine"><pre>                        std::regex_search(my_string, doublecomma) ||</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>105</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6</pre></td>
-    <td align="left" class="src coveredLine"><pre>                return(-1);</pre></td>
+    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 60 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>60</pre></td>
+    <td align="left" class="src coveredLine"><pre>                            std::regex_search(my_string, commainit)){</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>106</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>            }</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
+    <td align="left" class="src coveredLine"><pre>                return(-1);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>107</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>            }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>108</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>            // Remove all newlines once they are checked for correctness</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>109</pre></td>
-    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 56 times">&check;</span><span class="takenBranch" title="Branch 2 taken 56 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>168</pre></td>
-    <td align="left" class="src coveredLine"><pre>            my_string = remove_newlines(my_string);</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            // Remove all newlines once they are checked for correctness</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>110</pre></td>
     <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 56 times">&check;</span><span class="takenBranch" title="Branch 2 taken 56 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>168</pre></td>
-    <td align="left" class="src coveredLine"><pre>            std::vector&lt;int&gt; my_string_vector = vectorize(my_string);</pre></td>
+    <td align="left" class="src coveredLine"><pre>            my_string = remove_newlines(my_string);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>111</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 56 times">&check;</span><span class="takenBranch" title="Branch 2 taken 56 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><br/></td>
+    <td align="right" class="linecount coveredLine"><pre>168</pre></td>
+    <td align="left" class="src coveredLine"><pre>            std::vector&lt;int&gt; my_string_vector = vectorize(my_string);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>112</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>            // Check if all characters are valid</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>113</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>            // Check if all characters are valid</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>114</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 56 times">&check;</span><span class="notTakenBranch" title="Branch 1 not taken">&cross;</span><span class="takenBranch" title="Branch 2 taken 2 times">&check;</span><span class="takenBranch" title="Branch 3 taken 54 times">&check;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>112</pre></td>
     <td align="left" class="src coveredLine"><pre>            if(std::regex_search(my_string, not_valids)){</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>114</pre></td>
+    <td align="right" class="lineno"><pre>115</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>                return -1;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>115</pre></td>
+    <td align="right" class="lineno"><pre>116</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>            }</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>116</pre></td>
+    <td align="right" class="lineno"><pre>117</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>117</pre></td>
+    <td align="right" class="lineno"><pre>118</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>            // Sums up the numbers</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>118</pre></td>
+    <td align="right" class="lineno"><pre>119</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>54</pre></td>
     <td align="left" class="src coveredLine"><pre>            int total_sum = 0;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>119</pre></td>
+    <td align="right" class="lineno"><pre>120</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 134 times">&check;</span><span class="takenBranch" title="Branch 1 taken 54 times">&check;</span></td>
     <td align="right" class="linecount coveredLine"><pre>376</pre></td>
     <td align="left" class="src coveredLine"><pre>            for(int my_number = 0; my_number &lt; my_string_vector.size(); my_number++) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>120</pre></td>
+    <td align="right" class="lineno"><pre>121</pre></td>
     <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 134 times">&check;</span><span class="takenBranch" title="Branch 2 taken 128 times">&check;</span><span class="takenBranch" title="Branch 3 taken 6 times">&check;</span><br/></td>
     <td align="right" class="linecount coveredLine"><pre>536</pre></td>
     <td align="left" class="src coveredLine"><pre>                total_sum += (my_string_vector[my_number] &lt; 1001 ?</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>121</pre></td>
+    <td align="right" class="lineno"><pre>122</pre></td>
     <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 0 not taken">&cross;</span><span class="takenBranch" title="Branch 1 taken 128 times">&check;</span></td>
     <td align="right" class="linecount coveredLine"><pre>256</pre></td>
     <td align="left" class="src coveredLine"><pre>                                    my_string_vector[my_number] : 0);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>122</pre></td>
+    <td align="right" class="lineno"><pre>123</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>134</pre></td>
     <td align="left" class="src coveredLine"><pre>            }</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>123</pre></td>
+    <td align="right" class="lineno"><pre>124</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>54</pre></td>
     <td align="left" class="src coveredLine"><pre>            return(total_sum);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>124</pre></td>
+    <td align="right" class="lineno"><pre>125</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>56</pre></td>
     <td align="left" class="src coveredLine"><pre>        }</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>125</pre></td>
+    <td align="right" class="lineno"><pre>126</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>14</pre></td>
     <td align="left" class="src coveredLine"><pre>        return(-1);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>126</pre></td>
+    <td align="right" class="lineno"><pre>127</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>    }</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>127</pre></td>
+    <td align="right" class="lineno"><pre>128</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>    return(-1);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>128</pre></td>
+    <td align="right" class="lineno"><pre>129</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>78</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>80</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
