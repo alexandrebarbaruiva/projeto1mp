@@ -9,7 +9,7 @@
 * treated.
 *
 * Particularly useful when the string in question is filled with non-breaking
-* newlines
+* newlines.
 */
 std::string remove_newlines(std::string my_string){
     for(int pos = 0; pos < my_string.length(); pos++){
@@ -38,13 +38,10 @@ std::vector<int> vectorize(std::string my_string){
 
 /** @brief Function for finding special delimiters.
 *
-* Also checks if all characters are valid
+* Also checks if all characters are valid.
 */
 std::string find_delimiters(std::string my_string){
-    std::regex beginfile ("^//\\[.*\\]\n");
     std::vector<std::string> delimiters;
-    std::string open_del = "[";
-    std::string close_del = "]";
 
     // Find all delimiters
     std::size_t f_odel = my_string.find("["); // Finds start of a delimiter
@@ -55,7 +52,6 @@ std::string find_delimiters(std::string my_string){
                                             (f_cdel-f_odel-1));
         delimiters.push_back(new_delimiter);
         my_string.replace(0, f_cdel+2, "");
-        std::cout<<my_string;
         f_odel = my_string.find("[");
         f_cdel = my_string.find("]");
     }
@@ -66,6 +62,7 @@ std::string find_delimiters(std::string my_string){
         all_del += delimiters[md];
     }
     all_del += "\n]";
+
     // Check if all characters are valid
     std::regex not_valids (all_del);
     if(std::regex_search(my_string, not_valids)){
@@ -75,10 +72,10 @@ std::string find_delimiters(std::string my_string){
     // Change all delimiters to comma
     for(int md = 0; md < delimiters.size(); md++){
         std::size_t find_del = my_string.find(delimiters[md]);
-        std::cout << md << '\n';
-        while(find_del != std::string::npos){
+        while(find_del != std::string::npos && delimiters[md] != ","){
             my_string.replace(find_del,delimiters[md].size(),",");
             find_del = my_string.find(delimiters[md]);
+            std::cout << my_string << '\n';
         }
     }
     return my_string;
@@ -89,9 +86,11 @@ std::string find_delimiters(std::string my_string){
 * Once it reaches the end, it gives the result of a string sum.
 */
 int soma_string(std::string my_string){
-    std::regex endfile ("\\d+\n+$"); //
-    std::regex not_valids ("[^\\d,\n]");
-    std::regex beginfile ("^//\\[.*\\]\n");
+    std::regex endfile ("\\d+\n+$"); // REGEX correct end
+    std::regex not_valids ("[^\\d,\n]"); // REGEX char not valid
+    std::regex beginfile ("^//\\[.*\\]\n"); // REGEX personalized delimiters
+    std::regex doublecomma (",,"); // REGEX double commas
+    std::regex commainit ("^,"); // REGEX breaking comma at beginning
 
     if(!my_string.empty()){
         if(std::regex_search(my_string, endfile)){
@@ -101,9 +100,10 @@ int soma_string(std::string my_string){
             }
 
             // Check for negative number or white spaces in string
-            // TODO: check for double commas
             if(my_string[my_string.find('-')] == '-' ||
-                    my_string[my_string.find(' ')] == ' '){
+                    my_string[my_string.find(' ')] == ' '||
+                        std::regex_search(my_string, doublecomma) ||
+                            std::regex_search(my_string, commainit)){
                 return(-1);
             }
 

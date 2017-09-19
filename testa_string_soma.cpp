@@ -64,7 +64,6 @@ TEST_CASE("Verificação da função soma_string") {
             REQUIRE(soma_string("15,0,7,\n10,0\n,0,1\n") == 33);
             REQUIRE(soma_string("15,0,7,10\n,0\n,0,1\n") == 33);
         }
-
     }
     SECTION("Casos complexos que dão errado"){
         SECTION("Múltiplas vírgulas"){
@@ -85,5 +84,6 @@ TEST_CASE("Verificação da função soma_string") {
         REQUIRE(soma_string("//[.]\n3.2.1\n") == 6);
         REQUIRE(soma_string("//[i]\n4i4i4\n") == 12);
         REQUIRE(soma_string("//[ ]\n2 4 8\n") == 14);
+        REQUIRE(soma_string("//[,]\n,3,2,1\n") == -1);
     }
 }

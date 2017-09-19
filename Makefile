@@ -1,6 +1,6 @@
 default: run
 
-cppcov:
+perf:
 	g++ -fprofile-arcs -ftest-coverage -fPIC -O0 testa_string_soma.cpp -o program -std=c++11
 	valgrind --leak-check=yes ./program
 	valgrind --tool=cachegrind ./program
@@ -9,15 +9,15 @@ cppcov:
 	rm *.gcda *.gcno program cachegrind.*
 	cppcheck --enable=warning string_soma.cpp string_soma.hpp
 
-run:
+test:
 	g++ testa_string_soma.cpp -o program -std=c++11
 	./program
 	cppcheck --enable=warning string_soma.cpp string_soma.hpp
 	rm program
 
-main:
+run:
 	g++ testa_soma_string_stdin.cpp -o testa_soma_string_stdin -std=c++11
-	./testa_soma_string_stdin < entrada.txt
+	./testa_soma_string_stdin < entrada.txt > saida.txt
 	rm testa_soma_string_stdin
 
 clean:
