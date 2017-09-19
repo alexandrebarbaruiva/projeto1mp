@@ -1,6 +1,7 @@
 # Projeto Somador de strings numéricas
 
-This project aims to implement knowledge acquired in the class of Métodos de Programação by means of the simulation of the fall of a ball inside a 2D box.
+This project aims to implement knowledge acquired in the class of Métodos de Programação 
+by means of the simulation of the fall of a ball inside a 2D box.
 
 ## Requirements
 
@@ -16,7 +17,8 @@ It's used valgrind to check use of memory.
 
 ## Installing/Compiling
 
-Download the entire project directory, open the terminal or the equivalent of your machine, access the directory in which the project was downloaded using
+Download the entire project directory, open the terminal or the equivalent of your 
+machine, access the directory in which the project was downloaded using
 
 ```
 cd /YourDirectory/YourFolder/projeto1mp
@@ -36,9 +38,6 @@ For checking performance
 make perf
 ```
 
-## GCOV
-
-If you want to check the gcov results, go to [this link](https://cdn.rawgit.com/alexandrebarbaruiva/projeto1mp/f2607218/coverage.html).
 
 ## File description
 
