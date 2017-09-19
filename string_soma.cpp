@@ -51,10 +51,11 @@ std::string find_delimiters(std::string my_string){
         std::string new_delimiter = my_string.substr(f_odel+1,
                                             (f_cdel-f_odel-1));
         delimiters.push_back(new_delimiter);
-        my_string.replace(0, f_cdel+2, "");
+        my_string.replace(0, f_cdel+1, "");
         f_odel = my_string.find("[");
         f_cdel = my_string.find("]");
     }
+    my_string.replace(0, 1, "");
 
     // Concatenate all delimiters
     std::string all_del = "[^\\d";
@@ -90,6 +91,7 @@ int soma_string(std::string my_string){
     std::regex beginfile ("^//\\[.*\\]\n"); // REGEX personalized delimiters
     std::regex doublecomma (",,"); // REGEX double commas
     std::regex commainit ("^,"); // REGEX breaking comma at beginning
+    std::regex fournumbers ("\\d+,\\d+,\\d+,\\d+"); // four numbers, same line
 
     if(!my_string.empty()){
         if(std::regex_search(my_string, endfile)){
@@ -98,11 +100,13 @@ int soma_string(std::string my_string){
                 my_string = find_delimiters(my_string);
             }
 
-            // Check for negative number or white spaces in string
+            // Check for negative number, white spaces in string, double commas
+            // breaking commas or four numbers in line
             if(my_string[my_string.find('-')] == '-' ||
                     my_string[my_string.find(' ')] == ' '||
                         std::regex_search(my_string, doublecomma) ||
-                            std::regex_search(my_string, commainit)){
+                            std::regex_search(my_string, commainit) ||
+                                std::regex_search(my_string, fournumbers)){
                 return(-1);
             }
 

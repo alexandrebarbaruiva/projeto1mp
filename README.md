@@ -1,15 +1,16 @@
 # Projeto Somador de strings numéricas
 
-This project aims to implement knowledge acquired in the class of Métodos de Programação by means of the simulation of the fall of a ball inside a 2D box.
+This project aims to implement knowledge acquired in the class of Métodos de Programação by means of summing a string of numbers.
 
 ## Requirements
 
-You must have a C++ compiler (5.x and above) installed on the machine.
+You must have a C++ compiler (4.9 or above) installed on the machine.
 The operating system can be Linux, Windows or MacOS.
 Compiler installation:
 - [Windows.](https://cs.calvin.edu/courses/cs/112/resources/installingEclipse/cygwin/)
 - [Mac.](https://www.mkyong.com/mac/how-to-install-gcc-compiler-on-mac-os-x/)
 - [Linux.](https://askubuntu.com/questions/348654/how-to-install-g-compiler)
+- [Linux 4.9.](https://askubuntu.com/questions/428198/getting-installing-gcc-g-4-9-on-ubuntu)
 
 For coverage, gcovr is used. Go to http://gcovr.com/ for installation process.
 It's used valgrind to check use of memory.
@@ -27,13 +28,26 @@ Then compile using make.
 ```
 make
 ```
+In case your gcc is below 4.9, install using the [link provided](https://askubuntu.com/questions/428198/getting-installing-gcc-g-4-9-on-ubuntu)
+and use
+```
+make stable
+```
 For tests, run
 ```
 make test
 ```
+or
+```
+make stabletest
+```
 For checking performance
 ```
 make perf
+```
+or
+```
+make stableperf
 ```
 
 ## GCOV
