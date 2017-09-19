@@ -36,12 +36,17 @@ std::vector<int> vectorize(std::string my_string){
     return(vectorized);
 }
 
+/** @brief Function for finding special delimiters.
+*
+* Also checks if all characters are valid
+*/
 std::string find_delimiters(std::string my_string){
     std::regex beginfile ("^//\\[.*\\]\n");
     std::vector<std::string> delimiters;
     std::string open_del = "[";
     std::string close_del = "]";
 
+    // Find all delimiters
     std::size_t f_odel = my_string.find("["); // Finds start of a delimiter
     std::size_t f_cdel = my_string.find("]"); // Finds end of a delimiter
     while(f_odel != std::string::npos &&
@@ -55,15 +60,25 @@ std::string find_delimiters(std::string my_string){
         f_cdel = my_string.find("]");
     }
 
+    // Concatenate all delimiters
+    std::string all_del = "[^\\d";
+    for(int md = 0; md < delimiters.size(); md++){
+        all_del += delimiters[md];
+    }
+    all_del += "\n]";
+    // Check if all characters are valid
+    std::regex not_valids (all_del);
+    if(std::regex_search(my_string, not_valids)){
+        return("-1\n");
+    }
 
-
+    // Change all delimiters to comma
     for(int md = 0; md < delimiters.size(); md++){
         std::size_t find_del = my_string.find(delimiters[md]);
         std::cout << md << '\n';
         while(find_del != std::string::npos){
             my_string.replace(find_del,delimiters[md].size(),",");
-            std::size_t find_del = my_string.find(delimiters[md]);
-            std::cout << my_string << '\n';
+            find_del = my_string.find(delimiters[md]);
         }
     }
     return my_string;
@@ -79,75 +94,37 @@ int soma_string(std::string my_string){
     std::regex beginfile ("^//\\[.*\\]\n");
 
     if(!my_string.empty()){
-        // Check for negative number or withespaces in string
-        if(my_string[my_string.find('-')] == '-' ||
-                my_string[my_string.find(' ')] == ' '){
-            return(-1);
-        }
-        else{
-            if(std::regex_search(my_string, endfile)){
-                // Check for different delimiters
-                if(std::regex_search(my_string, beginfile)){
-                    my_string = find_delimiters(my_string);
-                }
-
-
-                // Remove all newlines once they are checked for correctness
-                my_string = remove_newlines(my_string);
-                std::vector<int> my_string_vector = vectorize(my_string);
-
-                if(std::regex_search(my_string, not_valids)){
-                    return -1;
-                }
-                
-                int total_sum = 0;
-                for(int my_number = 0; my_number < my_string_vector.size(); my_number++) {
-                    total_sum += (my_string_vector[my_number] < 1001 ?
-                                        my_string_vector[my_number] : 0);
-                }
-                return(total_sum);
+        if(std::regex_search(my_string, endfile)){
+            // Check for different delimiters
+            if(std::regex_search(my_string, beginfile)){
+                my_string = find_delimiters(my_string);
             }
-            return(-1);
+
+            // Check for negative number or white spaces in string
+            // TODO: check for double commas
+            if(my_string[my_string.find('-')] == '-' ||
+                    my_string[my_string.find(' ')] == ' '){
+                return(-1);
+            }
+
+            // Remove all newlines once they are checked for correctness
+            my_string = remove_newlines(my_string);
+            std::vector<int> my_string_vector = vectorize(my_string);
+
+            // Check if all characters are valid
+            if(std::regex_search(my_string, not_valids)){
+                return -1;
+            }
+
+            // Sums up the numbers
+            int total_sum = 0;
+            for(int my_number = 0; my_number < my_string_vector.size(); my_number++) {
+                total_sum += (my_string_vector[my_number] < 1001 ?
+                                    my_string_vector[my_number] : 0);
+            }
+            return(total_sum);
         }
         return(-1);
     }
     return(-1);
-
-
-
-  // if (std::regex_match ("subject", std::regex("(sub)(.*)")))
-  //   std::cout << "string literal matched\n";
-  //
-  // const char cstr[] = "subject";
-  // std::string s ("subject");
-  // std::regex e ("(sub)(.*)");
-  //
-  // if (std::regex_match (s,e))
-  //   std::cout << "string object matched\n";
-  //
-  // if ( std::regex_match ( s.begin(), s.end(), e ) )
-  //   std::cout << "range matched\n";
-  //
-  // std::cmatch cm;    // same as std::match_results<const char*> cm;
-  // std::regex_match (cstr,cm,e);
-  // std::cout << "string literal with " << cm.size() << " matches\n";
-  //
-  // std::smatch sm;    // same as std::match_results<string::const_iterator> sm;
-  // std::regex_match (s,sm,e);
-  // std::cout << "string object with " << sm.size() << " matches\n";
-  //
-  // std::regex_match ( s.cbegin(), s.cend(), sm, e);
-  // std::cout << "range with " << sm.size() << " matches\n";
-  //
-  // // using explicit flags:
-  // std::regex_match ( cstr, cm, e, std::regex_constants::match_default );
-  //
-  // std::cout << "the matches were: ";
-  // for (unsigned i=0; i<cm.size(); ++i) {
-  //   std::cout << "[" << cm[i] << "] ";
-  // }
-  //
-  // std::cout << std::endl;
-  //
-  // return 0;
 }

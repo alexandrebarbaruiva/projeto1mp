@@ -6,7 +6,7 @@ cppcov:
 	valgrind --tool=cachegrind ./program
 	gcovr -r . -e "./others/*"
 	gcovr -r . -e "./others/*" --html --html-details -o coverage.html
-	rm *.gcda *.gcno program
+	rm *.gcda *.gcno program cachegrind.*
 	cppcheck --enable=warning string_soma.cpp string_soma.hpp
 
 run:
@@ -17,7 +17,7 @@ run:
 
 main:
 	g++ testa_soma_string_stdin.cpp -o testa_soma_string_stdin -std=c++11
-	./testa_soma_string_stdin < entrada.txt > saida.txt
+	./testa_soma_string_stdin < entrada.txt
 	rm testa_soma_string_stdin
 
 clean:
