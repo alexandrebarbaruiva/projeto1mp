@@ -36,6 +36,9 @@ For checking performance
 make perf
 ```
 
+## GCOV
+
+If you want to check the gcov results, go to [this link](https://cdn.rawgit.com/alexandrebarbaruiva/projeto1mp/f2607218/coverage.html). 
 
 ## File description
 
