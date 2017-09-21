@@ -1,4 +1,4 @@
-#import <iostream>
+#include <iostream>
 
 std::string remove_newlines(std::string my_string);
 std::vector<int> vectorize(std::string my_string);
