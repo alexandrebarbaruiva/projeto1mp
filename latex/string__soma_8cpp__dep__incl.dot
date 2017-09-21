@@ -1,0 +1,10 @@
+digraph "string_soma.cpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node7 [label="string_soma.cpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="testa_soma_string_stdin.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$testa__soma__string__stdin_8cpp.html"];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="testa_string_soma.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$testa__string__soma_8cpp.html"];
+}

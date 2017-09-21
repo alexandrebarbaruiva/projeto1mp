@@ -1,0 +1,58 @@
+\begin{theindex}
+
+  \item {C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+IN}
+    \subitem {testa\+\_\+string\+\_\+soma.\+cpp}, \hyperpage{10}
+
+  \indexspace
+
+  \item {find\+\_\+delimiters}
+    \subitem {string\+\_\+soma.\+cpp}, \hyperpage{5}
+    \subitem {string\+\_\+soma.\+hpp}, \hyperpage{7}
+
+  \indexspace
+
+  \item {main}
+    \subitem {testa\+\_\+soma\+\_\+string\+\_\+stdin.\+cpp}, 
+		\hyperpage{9}
+
+  \indexspace
+
+  \item {R\+E\+A\+D\+M\+E.\+md}, \hyperpage{5}
+  \item {remove\+\_\+newlines}
+    \subitem {string\+\_\+soma.\+cpp}, \hyperpage{6}
+    \subitem {string\+\_\+soma.\+hpp}, \hyperpage{8}
+
+  \indexspace
+
+  \item {soma\+\_\+string}
+    \subitem {string\+\_\+soma.\+cpp}, \hyperpage{6}
+    \subitem {string\+\_\+soma.\+hpp}, \hyperpage{8}
+  \item {string\+\_\+soma.\+cpp}, \hyperpage{5}
+    \subitem {find\+\_\+delimiters}, \hyperpage{5}
+    \subitem {remove\+\_\+newlines}, \hyperpage{6}
+    \subitem {soma\+\_\+string}, \hyperpage{6}
+    \subitem {vectorize}, \hyperpage{7}
+  \item {string\+\_\+soma.\+hpp}, \hyperpage{7}
+    \subitem {find\+\_\+delimiters}, \hyperpage{7}
+    \subitem {remove\+\_\+newlines}, \hyperpage{8}
+    \subitem {soma\+\_\+string}, \hyperpage{8}
+    \subitem {vectorize}, \hyperpage{9}
+
+  \indexspace
+
+  \item {T\+E\+S\+T\+\_\+\+C\+A\+SE}
+    \subitem {testa\+\_\+string\+\_\+soma.\+cpp}, \hyperpage{10, 11}
+  \item {testa\+\_\+soma\+\_\+string\+\_\+stdin.\+cpp}, \hyperpage{9}
+    \subitem {main}, \hyperpage{9}
+  \item {testa\+\_\+string\+\_\+soma.\+cpp}, \hyperpage{10}
+    \subitem {C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+IN}, 
+		\hyperpage{10}
+    \subitem {T\+E\+S\+T\+\_\+\+C\+A\+SE}, \hyperpage{10, 11}
+
+  \indexspace
+
+  \item {vectorize}
+    \subitem {string\+\_\+soma.\+cpp}, \hyperpage{7}
+    \subitem {string\+\_\+soma.\+hpp}, \hyperpage{9}
+
+\end{theindex}

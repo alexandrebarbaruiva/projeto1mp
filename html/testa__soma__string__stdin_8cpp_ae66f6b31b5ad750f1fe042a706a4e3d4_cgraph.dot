@@ -1,0 +1,15 @@
+digraph "main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="soma_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$string__soma_8cpp.html#a781699877e3eb1ffda778737f2467621",tooltip="Main function, responsible for delegating tasks and show the result. "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="find_delimiters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$string__soma_8cpp.html#ae5a739a193de257232d3345bf0401006",tooltip="Function for finding special delimiters. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="remove_newlines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$string__soma_8cpp.html#a9439a2c945461bfec94d80ab46a9c3ae",tooltip="Function responsible for the removal of newlines in the string to be treated. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="vectorize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$string__soma_8cpp.html#a77eac4da5d157df321a5fd6d239721c2",tooltip="Function to make the process of summing up the numbers in the string truly simple. "];
+}

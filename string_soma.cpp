@@ -10,6 +10,8 @@
 *
 * Particularly useful when the string in question is filled with non-breaking
 * newlines.
+* @param my_string string for removal of newlines
+* @return string without newlines
 */
 std::string remove_newlines(std::string my_string){
     for(int pos = 0; pos < my_string.length(); pos++){
@@ -22,6 +24,8 @@ std::string remove_newlines(std::string my_string){
 * truly simple.
 *
 * Once vectorized, all kinds of operations become possible to be done.
+* @param my_string string used to make vector
+* @return vector with all numbers in string if string is valid
 */
 std::vector<int> vectorize(std::string my_string){
     std::vector<int> vectorized;
@@ -39,6 +43,8 @@ std::vector<int> vectorize(std::string my_string){
 /** @brief Function for finding special delimiters.
 *
 * Also checks if all characters are valid.
+* @param my_string string to be checked
+* @return string with all delimiters changed to comma
 */
 std::string find_delimiters(std::string my_string){
     std::vector<std::string> delimiters;
@@ -81,12 +87,15 @@ std::string find_delimiters(std::string my_string){
     return my_string;
 }
 
-/** @brief Main function, responsible for delegating tasks
+/** @brief Main function, responsible for delegating tasks and show the result.
 *
 * Once it reaches the end, it gives the result of a string sum.
+* @param my_string string for summing up
+* @return sum of string or error
 */
 int soma_string(std::string my_string){
     std::regex endfile ("\\d+\n+$"); // REGEX correct end
+    std::regex not_so_empty_string ("^\n+$");
     std::regex not_valids ("[^\\d,\n]"); // REGEX char not valid
     std::regex beginfile ("^//\\[.*\\]\n"); // REGEX personalized delimiters
     std::regex doublecomma (",,"); // REGEX double commas
@@ -126,6 +135,9 @@ int soma_string(std::string my_string){
                                     my_string_vector[my_number] : 0);
             }
             return(total_sum);
+        }
+        else if(std::regex_search(my_string, not_so_empty_string)){
+            return(0);
         }
         return(-1);
     }

@@ -1,38 +1,90 @@
-\section{string\+\_\+soma.\+hpp File Reference}
+\hypertarget{string__soma_8hpp}{}\section{string\+\_\+soma.\+hpp File Reference}
 \label{string__soma_8hpp}\index{string\+\_\+soma.\+hpp@{string\+\_\+soma.\+hpp}}
 {\ttfamily \#import $<$iostream$>$}\newline
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-std\+::string \textbf{ remove\+\_\+spaces} (my\+\_\+string)
-\item 
-std\+::vector$<$ int $>$ \textbf{ vectorize} (std\+::string my\+\_\+string)
+std\+::string \hyperlink{string__soma_8hpp_a9439a2c945461bfec94d80ab46a9c3ae}{remove\+\_\+newlines} (std\+::string my\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Function responsible for the removal of newlines in the string to be treated. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{string__soma_8hpp_a77eac4da5d157df321a5fd6d239721c2}{vectorize} (std\+::string my\+\_\+string)
 \begin{DoxyCompactList}\small\item\em Function to make the process of summing up the numbers in the string truly simple. \end{DoxyCompactList}\item 
-int \textbf{ soma\+\_\+string} (std\+::string my\+\_\+string)
-\begin{DoxyCompactList}\small\item\em Main function, responsible for delegating tasks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\+::string \hyperlink{string__soma_8hpp_ae5a739a193de257232d3345bf0401006}{find\+\_\+delimiters} (std\+::string my\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Function for finding special delimiters. \end{DoxyCompactList}\item 
+int \hyperlink{string__soma_8hpp_a781699877e3eb1ffda778737f2467621}{soma\+\_\+string} (std\+::string my\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Main function, responsible for delegating tasks and show the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\mbox{\label{string__soma_8hpp_a9148655a46cc1e3919ceba60410c17f0}} 
-\index{string\+\_\+soma.\+hpp@{string\+\_\+soma.\+hpp}!remove\+\_\+spaces@{remove\+\_\+spaces}}
-\index{remove\+\_\+spaces@{remove\+\_\+spaces}!string\+\_\+soma.\+hpp@{string\+\_\+soma.\+hpp}}
-\subsubsection{remove\+\_\+spaces()}
-{\footnotesize\ttfamily std\+::string remove\+\_\+spaces (\begin{DoxyParamCaption}\item[{my\+\_\+string}]{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{string__soma_8hpp_ae5a739a193de257232d3345bf0401006}\label{string__soma_8hpp_ae5a739a193de257232d3345bf0401006}} 
+\index{string\+\_\+soma.\+hpp@{string\+\_\+soma.\+hpp}!find\+\_\+delimiters@{find\+\_\+delimiters}}
+\index{find\+\_\+delimiters@{find\+\_\+delimiters}!string\+\_\+soma.\+hpp@{string\+\_\+soma.\+hpp}}
+\subsubsection{\texorpdfstring{find\+\_\+delimiters()}{find\_delimiters()}}
+{\footnotesize\ttfamily std\+::string find\+\_\+delimiters (\begin{DoxyParamCaption}\item[{std\+::string}]{my\+\_\+string }\end{DoxyParamCaption})}
 
-\mbox{\label{string__soma_8hpp_a781699877e3eb1ffda778737f2467621}} 
+
+
+Function for finding special delimiters. 
+
+Also checks if all characters are valid. 
+\begin{DoxyParams}{Parameters}
+{\em my\+\_\+string} & string to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string with all delimiters changed to comma 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file string\+\_\+soma.\+cpp.
+
+\mbox{\Hypertarget{string__soma_8hpp_a9439a2c945461bfec94d80ab46a9c3ae}\label{string__soma_8hpp_a9439a2c945461bfec94d80ab46a9c3ae}} 
+\index{string\+\_\+soma.\+hpp@{string\+\_\+soma.\+hpp}!remove\+\_\+newlines@{remove\+\_\+newlines}}
+\index{remove\+\_\+newlines@{remove\+\_\+newlines}!string\+\_\+soma.\+hpp@{string\+\_\+soma.\+hpp}}
+\subsubsection{\texorpdfstring{remove\+\_\+newlines()}{remove\_newlines()}}
+{\footnotesize\ttfamily std\+::string remove\+\_\+newlines (\begin{DoxyParamCaption}\item[{std\+::string}]{my\+\_\+string }\end{DoxyParamCaption})}
+
+
+
+Function responsible for the removal of newlines in the string to be treated. 
+
+Particularly useful when the string in question is filled with non-\/breaking newlines. 
+\begin{DoxyParams}{Parameters}
+{\em my\+\_\+string} & string for removal of newlines \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string without newlines 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file string\+\_\+soma.\+cpp.
+
+\mbox{\Hypertarget{string__soma_8hpp_a781699877e3eb1ffda778737f2467621}\label{string__soma_8hpp_a781699877e3eb1ffda778737f2467621}} 
 \index{string\+\_\+soma.\+hpp@{string\+\_\+soma.\+hpp}!soma\+\_\+string@{soma\+\_\+string}}
 \index{soma\+\_\+string@{soma\+\_\+string}!string\+\_\+soma.\+hpp@{string\+\_\+soma.\+hpp}}
-\subsubsection{soma\+\_\+string()}
+\subsubsection{\texorpdfstring{soma\+\_\+string()}{soma\_string()}}
 {\footnotesize\ttfamily int soma\+\_\+string (\begin{DoxyParamCaption}\item[{std\+::string}]{my\+\_\+string }\end{DoxyParamCaption})}
 
 
 
-Main function, responsible for delegating tasks. 
+Main function, responsible for delegating tasks and show the result. 
 
-Once it reaches the end, it gives the result of a string sum. \mbox{\label{string__soma_8hpp_a77eac4da5d157df321a5fd6d239721c2}} 
+Once it reaches the end, it gives the result of a string sum. 
+\begin{DoxyParams}{Parameters}
+{\em my\+\_\+string} & string for summing up \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum of string or error 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file string\+\_\+soma.\+cpp.
+
+\mbox{\Hypertarget{string__soma_8hpp_a77eac4da5d157df321a5fd6d239721c2}\label{string__soma_8hpp_a77eac4da5d157df321a5fd6d239721c2}} 
 \index{string\+\_\+soma.\+hpp@{string\+\_\+soma.\+hpp}!vectorize@{vectorize}}
 \index{vectorize@{vectorize}!string\+\_\+soma.\+hpp@{string\+\_\+soma.\+hpp}}
-\subsubsection{vectorize()}
+\subsubsection{\texorpdfstring{vectorize()}{vectorize()}}
 {\footnotesize\ttfamily std\+::vector$<$int$>$ vectorize (\begin{DoxyParamCaption}\item[{std\+::string}]{my\+\_\+string }\end{DoxyParamCaption})}
 
 
@@ -40,3 +92,14 @@ Once it reaches the end, it gives the result of a string sum. \mbox{\label{strin
 Function to make the process of summing up the numbers in the string truly simple. 
 
 Once vectorized, all kinds of operations become possible to be done. 
+\begin{DoxyParams}{Parameters}
+{\em my\+\_\+string} & string used to make vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector with all numbers in string if string is valid 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file string\+\_\+soma.\+cpp.
+

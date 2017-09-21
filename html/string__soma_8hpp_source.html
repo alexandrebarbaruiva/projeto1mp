@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Project 1: string_soma.hpp Source File</title>
+<title>Soma de Strings: string_soma.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,9 +28,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Project 1
+   <div id="projectname">Soma de Strings
    </div>
-   <div id="projectbrief">Sum of Strings</div>
+   <div id="projectbrief">Projeto de MP para soma de strings</div>
   </td>
  </tr>
  </tbody>
@@ -44,6 +51,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('string__soma_8hpp_source.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -63,15 +84,20 @@ $(function() {
 <div class="title">string_soma.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="string__soma_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#import &lt;iostream&gt;</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;std::string <a class="code" href="string__soma_8hpp.html#a9148655a46cc1e3919ceba60410c17f0">remove_spaces</a>(my_string);</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;std::vector&lt;int&gt; <a class="code" href="string__soma_8hpp.html#a77eac4da5d157df321a5fd6d239721c2">vectorize</a>(std::string my_string);</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keywordtype">int</span> <a class="code" href="string__soma_8hpp.html#a781699877e3eb1ffda778737f2467621">soma_string</a>(std::string my_string);</div><div class="ttc" id="string__soma_8hpp_html_a9148655a46cc1e3919ceba60410c17f0"><div class="ttname"><a href="string__soma_8hpp.html#a9148655a46cc1e3919ceba60410c17f0">remove_spaces</a></div><div class="ttdeci">std::string remove_spaces(my_string)</div></div>
-<div class="ttc" id="string__soma_8hpp_html_a781699877e3eb1ffda778737f2467621"><div class="ttname"><a href="string__soma_8hpp.html#a781699877e3eb1ffda778737f2467621">soma_string</a></div><div class="ttdeci">int soma_string(std::string my_string)</div><div class="ttdoc">Main function, responsible for delegating tasks. </div><div class="ttdef"><b>Definition:</b> string_soma.cpp:88</div></div>
-<div class="ttc" id="string__soma_8hpp_html_a77eac4da5d157df321a5fd6d239721c2"><div class="ttname"><a href="string__soma_8hpp.html#a77eac4da5d157df321a5fd6d239721c2">vectorize</a></div><div class="ttdeci">std::vector&lt; int &gt; vectorize(std::string my_string)</div><div class="ttdoc">Function to make the process of summing up the numbers in the string truly simple. </div><div class="ttdef"><b>Definition:</b> string_soma.cpp:26</div></div>
+<a href="string__soma_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#import &lt;iostream&gt;</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;std::string <a class="code" href="string__soma_8hpp.html#a9439a2c945461bfec94d80ab46a9c3ae">remove_newlines</a>(std::string my_string);</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;std::vector&lt;int&gt; <a class="code" href="string__soma_8hpp.html#a77eac4da5d157df321a5fd6d239721c2">vectorize</a>(std::string my_string);</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;std::string <a class="code" href="string__soma_8hpp.html#ae5a739a193de257232d3345bf0401006">find_delimiters</a>(std::string my_string);</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">int</span> <a class="code" href="string__soma_8hpp.html#a781699877e3eb1ffda778737f2467621">soma_string</a>(std::string my_string);</div><div class="ttc" id="string__soma_8hpp_html_a781699877e3eb1ffda778737f2467621"><div class="ttname"><a href="string__soma_8hpp.html#a781699877e3eb1ffda778737f2467621">soma_string</a></div><div class="ttdeci">int soma_string(std::string my_string)</div><div class="ttdoc">Main function, responsible for delegating tasks and show the result. </div><div class="ttdef"><b>Definition:</b> <a href="string__soma_8cpp_source.html#l00096">string_soma.cpp:96</a></div></div>
+<div class="ttc" id="string__soma_8hpp_html_ae5a739a193de257232d3345bf0401006"><div class="ttname"><a href="string__soma_8hpp.html#ae5a739a193de257232d3345bf0401006">find_delimiters</a></div><div class="ttdeci">std::string find_delimiters(std::string my_string)</div><div class="ttdoc">Function for finding special delimiters. </div><div class="ttdef"><b>Definition:</b> <a href="string__soma_8cpp_source.html#l00049">string_soma.cpp:49</a></div></div>
+<div class="ttc" id="string__soma_8hpp_html_a9439a2c945461bfec94d80ab46a9c3ae"><div class="ttname"><a href="string__soma_8hpp.html#a9439a2c945461bfec94d80ab46a9c3ae">remove_newlines</a></div><div class="ttdeci">std::string remove_newlines(std::string my_string)</div><div class="ttdoc">Function responsible for the removal of newlines in the string to be treated. </div><div class="ttdef"><b>Definition:</b> <a href="string__soma_8cpp_source.html#l00016">string_soma.cpp:16</a></div></div>
+<div class="ttc" id="string__soma_8hpp_html_a77eac4da5d157df321a5fd6d239721c2"><div class="ttname"><a href="string__soma_8hpp.html#a77eac4da5d157df321a5fd6d239721c2">vectorize</a></div><div class="ttdeci">std::vector&lt; int &gt; vectorize(std::string my_string)</div><div class="ttdoc">Function to make the process of summing up the numbers in the string truly simple. </div><div class="ttdef"><b>Definition:</b> <a href="string__soma_8cpp_source.html#l00030">string_soma.cpp:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="string__soma_8hpp.html">string_soma.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

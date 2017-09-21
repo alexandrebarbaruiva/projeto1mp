@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Project 1: string_soma.hpp File Reference</title>
+<title>Soma de Strings: string_soma.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,9 +28,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Project 1
+   <div id="projectname">Soma de Strings
    </div>
-   <div id="projectbrief">Sum of Strings</div>
+   <div id="projectbrief">Projeto de MP para soma de strings</div>
   </td>
  </tr>
  </tbody>
@@ -43,6 +50,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('string__soma_8hpp.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,7 +79,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
@@ -71,31 +92,75 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9148655a46cc1e3919ceba60410c17f0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__soma_8hpp.html#a9148655a46cc1e3919ceba60410c17f0">remove_spaces</a> (my_string)</td></tr>
-<tr class="separator:a9148655a46cc1e3919ceba60410c17f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9439a2c945461bfec94d80ab46a9c3ae"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__soma_8hpp.html#a9439a2c945461bfec94d80ab46a9c3ae">remove_newlines</a> (std::string my_string)</td></tr>
+<tr class="memdesc:a9439a2c945461bfec94d80ab46a9c3ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function responsible for the removal of newlines in the string to be treated.  <a href="#a9439a2c945461bfec94d80ab46a9c3ae">More...</a><br /></td></tr>
+<tr class="separator:a9439a2c945461bfec94d80ab46a9c3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77eac4da5d157df321a5fd6d239721c2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__soma_8hpp.html#a77eac4da5d157df321a5fd6d239721c2">vectorize</a> (std::string my_string)</td></tr>
 <tr class="memdesc:a77eac4da5d157df321a5fd6d239721c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to make the process of summing up the numbers in the string truly simple.  <a href="#a77eac4da5d157df321a5fd6d239721c2">More...</a><br /></td></tr>
 <tr class="separator:a77eac4da5d157df321a5fd6d239721c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a739a193de257232d3345bf0401006"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__soma_8hpp.html#ae5a739a193de257232d3345bf0401006">find_delimiters</a> (std::string my_string)</td></tr>
+<tr class="memdesc:ae5a739a193de257232d3345bf0401006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for finding special delimiters.  <a href="#ae5a739a193de257232d3345bf0401006">More...</a><br /></td></tr>
+<tr class="separator:ae5a739a193de257232d3345bf0401006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a781699877e3eb1ffda778737f2467621"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__soma_8hpp.html#a781699877e3eb1ffda778737f2467621">soma_string</a> (std::string my_string)</td></tr>
-<tr class="memdesc:a781699877e3eb1ffda778737f2467621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function, responsible for delegating tasks.  <a href="#a781699877e3eb1ffda778737f2467621">More...</a><br /></td></tr>
+<tr class="memdesc:a781699877e3eb1ffda778737f2467621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function, responsible for delegating tasks and show the result.  <a href="#a781699877e3eb1ffda778737f2467621">More...</a><br /></td></tr>
 <tr class="separator:a781699877e3eb1ffda778737f2467621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a9148655a46cc1e3919ceba60410c17f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9148655a46cc1e3919ceba60410c17f0">&#9670;&nbsp;</a></span>remove_spaces()</h2>
+<a id="ae5a739a193de257232d3345bf0401006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a739a193de257232d3345bf0401006">&#9670;&nbsp;</a></span>find_delimiters()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string remove_spaces </td>
+          <td class="memname">std::string find_delimiters </td>
           <td>(</td>
-          <td class="paramtype">my_string&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>my_string</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Function for finding special delimiters. </p>
+<p>Also checks if all characters are valid. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">my_string</td><td>string to be checked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string with all delimiters changed to comma </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="string__soma_8cpp_source.html#l00049">49</a> of file <a class="el" href="string__soma_8cpp_source.html">string_soma.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9439a2c945461bfec94d80ab46a9c3ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9439a2c945461bfec94d80ab46a9c3ae">&#9670;&nbsp;</a></span>remove_newlines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string remove_newlines </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>my_string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function responsible for the removal of newlines in the string to be treated. </p>
+<p>Particularly useful when the string in question is filled with non-breaking newlines. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">my_string</td><td>string for removal of newlines </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string without newlines </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="string__soma_8cpp_source.html#l00016">16</a> of file <a class="el" href="string__soma_8cpp_source.html">string_soma.cpp</a>.</p>
 
 </div>
 </div>
@@ -115,8 +180,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Main function, responsible for delegating tasks. </p>
-<p>Once it reaches the end, it gives the result of a string sum. </p>
+<p>Main function, responsible for delegating tasks and show the result. </p>
+<p>Once it reaches the end, it gives the result of a string sum. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">my_string</td><td>string for summing up </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sum of string or error </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="string__soma_8cpp_source.html#l00096">96</a> of file <a class="el" href="string__soma_8cpp_source.html">string_soma.cpp</a>.</p>
 
 </div>
 </div>
@@ -137,16 +210,28 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Function to make the process of summing up the numbers in the string truly simple. </p>
-<p>Once vectorized, all kinds of operations become possible to be done. </p>
+<p>Once vectorized, all kinds of operations become possible to be done. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">my_string</td><td>string used to make vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector with all numbers in string if string is valid </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="string__soma_8cpp_source.html#l00030">30</a> of file <a class="el" href="string__soma_8cpp_source.html">string_soma.cpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="string__soma_8hpp.html">string_soma.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

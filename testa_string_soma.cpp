@@ -1,35 +1,26 @@
 #define CATCH_CONFIG_MAIN
+#include <vector>
+#include <iostream>
+#include <string>
 #include "others/catch.hpp"
 #include "string_soma.cpp"
 
 /**
-* @brief Unit Tests.
+* @brief Verifica a funcionalidade da função soma_string.
 *
-* 1. Criar teste;
-* 2. Teste falhar;
-* 3. Implementar código (mantém-se no 3 enquanto 4 não ocorrer);
-* 4. Teste bem sucedido;
-* 5. Voltar ao passo (1) até conclusão do projeto.
-*
-* Estrutura dos testes é a seguinte:
-* 1. Inicializa testes com TEST_CASE;
-* 2. Inicializa objetos para teste
-* 3. Verifica funções de classes, separando diferentes classes com SECTION
-* 4. No início e no final do teste de uma classe, imprime na linha de comando qual classe
-* está sendo testada.
+* Verifica a maior parte dos possíveis comportamentos da função
 */
 TEST_CASE("Verificação da função soma_string") {
     SECTION("Casos de quebras básicas"){
         // Para string nula
         REQUIRE(soma_string("") == -1);
         // Para número negativo
-        REQUIRE(soma_string("-1\n") == -1);
+        REQUIRE(soma_string("-2\n") == -1);
         // Para string sem \n
         REQUIRE(soma_string("1") == -1);
         // Para string sem número, não há especificação, portanto retorna -1
-        REQUIRE(soma_string("\n") == -1);
+        REQUIRE(soma_string("\n") == 0);
     }
-
     SECTION("Casos básicos que dão certo"){
         SECTION("Casos com 1 número e 1 casa decimal"){
             // Passar nestes testes quer dizer que o REGEX
@@ -53,7 +44,7 @@ TEST_CASE("Verificação da função soma_string") {
             REQUIRE(soma_string("230\n") == 230);
             REQUIRE(soma_string("990\n") == 990);
         }
-        SECTION("Casos com 1 número e 4 casas decimais"){
+        SECTION("Casos com 1 número e 4 casas decimais ou mais"){
             // Passar nestes testes quer dizer que o REGEX
             // está bem estruturado para \d+\n e número menor que 1000
             REQUIRE(soma_string("1000\n") == 1000);
@@ -99,8 +90,6 @@ TEST_CASE("Verificação da função soma_string") {
         REQUIRE(soma_string("1,2 \n") == -1);
         REQUIRE(soma_string("1\n,2\n") == 3);
         REQUIRE(soma_string("1,2,3\n,4\n") == 10);
-
-
     }
     SECTION("Testes com delimitadores diferentes"){
         // Passar nestes testes quer dizer que o programa identifica
@@ -115,4 +104,32 @@ TEST_CASE("Verificação da função soma_string") {
         REQUIRE(soma_string("//[ ][.][i]\n1 2i7\n") == 10);
         REQUIRE(soma_string("//[ ][.][i]1 2i7\n") == -1);
     }
+}
+/**
+* @brief Verifica se comportamento está dentro do esperado
+* para remoção de quebras de linhas.
+*/
+TEST_CASE("Teste da função remove_newlines"){
+    REQUIRE(remove_newlines("\n3,2,1\n") == "3,2,1");
+    REQUIRE(remove_newlines("\n\n\n\n3\n\n\n\n,\n\n\n\n4\n\n\n\n") == "3,4");
+}
+/**
+* @brief Verifica se comportamento está dentro do esperado
+* para troca de delimitadores por vírgulas.
+*/
+TEST_CASE("Teste da função find_delimiters"){
+    REQUIRE(find_delimiters("//[,]\n3,2,1\n") == "3,2,1\n");
+    REQUIRE(find_delimiters("//[.]\n3.\n4\n") == "3,\n4\n");
+}
+/**
+* @brief Verifica se a vetorização da string ocorre de maneira adequada
+*/
+TEST_CASE("Teste da função vectorize"){
+    std::vector<int> arr;
+    arr.push_back(3);
+    arr.push_back(2);
+    arr.push_back(1);
+    REQUIRE(vectorize("3,2,1") == arr);
+    arr.erase(arr.begin(),arr.begin()+2);
+    REQUIRE(vectorize("1") == arr);
 }

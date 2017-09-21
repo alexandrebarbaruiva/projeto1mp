@@ -1,15 +1,18 @@
-This project aims to implement knowledge acquired in the class of Métodos de Programação by means of the simulation of the fall of a ball inside a 2D box.
+This project aims to implement knowledge acquired in the class of Métodos de Programação by means of summing a string of numbers. \subsection*{Documentation}
+
+\href{https://cdn.rawgit.com/alexandrebarbaruiva/projeto1mp/382482ae/html/md__r_e_a_d_m_e.html}{\tt Here.}
 
 \subsection*{Requirements}
 
-You must have a C ++ compiler installed on the machine. The operating system can be Linux, Windows or Mac\+OS. Compiler installation\+:
+You must have a C++ compiler (4.\+9 or above) installed on the machine. The operating system can be Linux, Windows or Mac\+OS. Compiler installation\+:
 \begin{DoxyItemize}
-\item {\tt Windows.}
-\item {\tt Mac.}
-\item {\tt Linux.}
+\item \href{https://cs.calvin.edu/courses/cs/112/resources/installingEclipse/cygwin/}{\tt Windows.}
+\item \href{https://www.mkyong.com/mac/how-to-install-gcc-compiler-on-mac-os-x/}{\tt Mac.}
+\item \href{https://askubuntu.com/questions/348654/how-to-install-g-compiler}{\tt Linux.}
+\item \href{https://askubuntu.com/questions/428198/getting-installing-gcc-g-4-9-on-ubuntu}{\tt Linux 4.\+9.}
 \end{DoxyItemize}
 
-For coverage, gcovr is used. Go to {\tt http\+://gcovr.\+com/} for installation process. It\textquotesingle{}s used valgrind to check use of memory.
+For coverage, gcovr is used. Go to \href{http://gcovr.com/}{\tt http\+://gcovr.\+com/} for installation process. It\textquotesingle{}s used \href{http://valgrind.org/}{\tt valgrind} to check use of memory. \href{http://valgrind.org/docs/manual/dist.install.html}{\tt Installation process here.}
 
 \subsection*{Installing/\+Compiling}
 
@@ -19,36 +22,52 @@ Download the entire project directory, open the terminal or the equivalent of yo
 \begin{DoxyCode}
 cd /YourDirectory/YourFolder/projeto1mp
 \end{DoxyCode}
- Insert your input according to the requisites found here\+: {\tt P\+DF Document}. Then compile using make.
+ Insert your input according to the requisites found here\+: \href{mp_t1.pdf}{\tt P\+DF Document}. Then compile using make.
 
 
 \begin{DoxyCode}
 make
 \end{DoxyCode}
+ In case your gcc is below 4.\+9, install using the \href{https://askubuntu.com/questions/428198/getting-installing-gcc-g-4-9-on-ubuntu}{\tt link provided} and use 
+\begin{DoxyCode}
+make stable
+\end{DoxyCode}
  For tests, run 
 \begin{DoxyCode}
 make test
+\end{DoxyCode}
+ or 
+\begin{DoxyCode}
+make stabletest
 \end{DoxyCode}
  For checking performance 
 \begin{DoxyCode}
 make perf
 \end{DoxyCode}
+ or 
+\begin{DoxyCode}
+make stableperf
+\end{DoxyCode}
 
+
+\subsection*{G\+C\+OV}
+
+If you want to check the gcov results, go to \href{https://cdn.rawgit.com/alexandrebarbaruiva/projeto1mp/f2607218/coverage.html}{\tt this link}.
 
 \subsection*{File description}
 
 
 \begin{DoxyItemize}
-\item \doxyref{testa\+\_\+soma\+\_\+string\+\_\+stdin.\+cpp}{p.}{testa__soma__string__stdin_8cpp} -\/ Program for checking text files
-\item \doxyref{string\+\_\+soma.\+hpp}{p.}{string__soma_8hpp} -\/ Abstract file for function soma\+\_\+string
-\item \doxyref{string\+\_\+soma.\+cpp}{p.}{string__soma_8cpp} -\/ Implementation of function soma\+\_\+string
-\item \doxyref{testa\+\_\+string\+\_\+soma.\+cpp}{p.}{testa__string__soma_8cpp} -\/ Code for all the unit tests (it was used T\+DD in this project! Yay!)
+\item \hyperlink{testa__soma__string__stdin_8cpp}{testa\+\_\+soma\+\_\+string\+\_\+stdin.\+cpp} -\/ Program for checking text files
+\item \hyperlink{string__soma_8hpp}{string\+\_\+soma.\+hpp} -\/ Abstract file for function soma\+\_\+string
+\item \hyperlink{string__soma_8cpp}{string\+\_\+soma.\+cpp} -\/ Implementation of function soma\+\_\+string
+\item \hyperlink{testa__string__soma_8cpp}{testa\+\_\+string\+\_\+soma.\+cpp} -\/ Code for all the unit tests (it was used T\+DD in this project! Yay!)
 \end{DoxyItemize}
 
 \subsection*{T\+O\+DO}
 
 
 \begin{DoxyItemize}
-\item [x] Criar doxygen
-\item [x] Checar vírgulas duplas 
+\item \mbox{[}x\mbox{]} Criar doxygen
+\item \mbox{[}x\mbox{]} Checar vírgulas duplas 
 \end{DoxyItemize}

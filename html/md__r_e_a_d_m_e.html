@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Project 1: Projeto Somador de strings numéricas</title>
+<title>Soma de Strings: Projeto Somador de strings numéricas</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,9 +28,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Project 1
+   <div id="projectname">Soma de Strings
    </div>
-   <div id="projectbrief">Sum of Strings</div>
+   <div id="projectbrief">Projeto de MP para soma de strings</div>
   </td>
  </tr>
  </tbody>
@@ -43,6 +50,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,24 +79,27 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Projeto Somador de strings numéricas </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This project aims to implement knowledge acquired in the class of Métodos de Programação by means of the simulation of the fall of a ball inside a 2D box.</p>
+<div class="textblock"><p>This project aims to implement knowledge acquired in the class of Métodos de Programação by means of summing a string of numbers. </p><h2>Documentation</h2>
+<p><a href="https://cdn.rawgit.com/alexandrebarbaruiva/projeto1mp/382482ae/html/md__r_e_a_d_m_e.html">Here.</a></p>
 <h2>Requirements</h2>
-<p>You must have a C ++ compiler installed on the machine. The operating system can be Linux, Windows or MacOS. Compiler installation:</p><ul>
+<p>You must have a C++ compiler (4.9 or above) installed on the machine. The operating system can be Linux, Windows or MacOS. Compiler installation:</p><ul>
 <li><a href="https://cs.calvin.edu/courses/cs/112/resources/installingEclipse/cygwin/">Windows.</a></li>
 <li><a href="https://www.mkyong.com/mac/how-to-install-gcc-compiler-on-mac-os-x/">Mac.</a></li>
 <li><a href="https://askubuntu.com/questions/348654/how-to-install-g-compiler">Linux.</a></li>
+<li><a href="https://askubuntu.com/questions/428198/getting-installing-gcc-g-4-9-on-ubuntu">Linux 4.9.</a></li>
 </ul>
-<p>For coverage, gcovr is used. Go to <a href="http://gcovr.com/">http://gcovr.com/</a> for installation process. It's used valgrind to check use of memory.</p>
+<p>For coverage, gcovr is used. Go to <a href="http://gcovr.com/">http://gcovr.com/</a> for installation process. It's used <a href="http://valgrind.org/">valgrind</a> to check use of memory. <a href="http://valgrind.org/docs/manual/dist.install.html">Installation process here.</a></p>
 <h2>Installing/Compiling</h2>
 <p>Download the entire project directory, open the terminal or the equivalent of your machine, access the directory in which the project was downloaded using</p>
 <div class="fragment"><div class="line">cd /YourDirectory/YourFolder/projeto1mp</div></div><!-- fragment --><p> Insert your input according to the requisites found here: <a href="mp_t1.pdf">PDF Document</a>. Then compile using make.</p>
-<div class="fragment"><div class="line">make</div></div><!-- fragment --><p> For tests, run </p><div class="fragment"><div class="line">make test</div></div><!-- fragment --><p> For checking performance </p><div class="fragment"><div class="line">make perf</div></div><!-- fragment --><h2>File description</h2>
+<div class="fragment"><div class="line">make</div></div><!-- fragment --><p> In case your gcc is below 4.9, install using the <a href="https://askubuntu.com/questions/428198/getting-installing-gcc-g-4-9-on-ubuntu">link provided</a> and use </p><div class="fragment"><div class="line">make stable</div></div><!-- fragment --><p> For tests, run </p><div class="fragment"><div class="line">make test</div></div><!-- fragment --><p> or </p><div class="fragment"><div class="line">make stabletest</div></div><!-- fragment --><p> For checking performance </p><div class="fragment"><div class="line">make perf</div></div><!-- fragment --><p> or </p><div class="fragment"><div class="line">make stableperf</div></div><!-- fragment --><h2>GCOV</h2>
+<p>If you want to check the gcov results, go to <a href="https://cdn.rawgit.com/alexandrebarbaruiva/projeto1mp/f2607218/coverage.html">this link</a>.</p>
+<h2>File description</h2>
 <ul>
 <li><a class="el" href="testa__soma__string__stdin_8cpp.html">testa_soma_string_stdin.cpp</a> - Program for checking text files</li>
 <li><a class="el" href="string__soma_8hpp.html">string_soma.hpp</a> - Abstract file for function soma_string</li>
@@ -87,11 +112,14 @@ $(function() {
 <li>[x] Checar vírgulas duplas </li>
 </ul>
 </div></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

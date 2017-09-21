@@ -1,0 +1,15 @@
+digraph "find_delimiters"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="find_delimiters",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="soma_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$string__soma_8hpp.html#a781699877e3eb1ffda778737f2467621",tooltip="Main function, responsible for delegating tasks and show the result. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$testa__soma__string__stdin_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TEST_CASE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$testa__string__soma_8cpp.html#a012d693008827f2e341a0a87d32cf9e6",tooltip="Verifica a funcionalidade da função soma_string. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TEST_CASE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$testa__string__soma_8cpp.html#a528c9a1f420afbfe80b7633b84551dcc",tooltip="Verifica se comportamento está dentro do esperado para troca de delimitadores por vírgulas..."];
+}
